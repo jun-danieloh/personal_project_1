@@ -1,0 +1,14 @@
+1. Task0
+There are no loops in this code so big O is just O(1)
+
+2. Task1
+There are two loops so big O is O(n)
+
+3. Task2
+There is just one level of loops so O(n)
+
+4. Task3
+O(n^2)
+
+5. Task4
+O(n)
