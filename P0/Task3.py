@@ -78,7 +78,7 @@ code_list = list(listOfCallsByBangalore)
 
 print("The numbers called by people in Bangalore have codes:")
 
-for areaCode in code_list:
+for areaCode in sorted(code_list):
     print(areaCode)
 
 
@@ -94,12 +94,18 @@ for areaCode in code_list:
 callFromBangToBang = 0
 callFromBangToAny = 0
 
+#for call in calls:
+#    if call[0][:5] == '(080)':
+#        callFromBangToBang += 1
+#        callFromBangToAny += 1
+#    else:
+#        callFromBangToAny += 1
+
 for call in calls:
     if call[0][:5] == '(080)':
-        callFromBangToBang += 1
         callFromBangToAny += 1
-    else:
-        callFromBangToAny += 1
+        if call[1][:5] == '(080)':
+            callFromBangToBang += 1
 
 percentage = (callFromBangToBang / callFromBangToAny)*100
 

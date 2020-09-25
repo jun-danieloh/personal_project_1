@@ -32,14 +32,20 @@ for call in calls:
     else:
         spendTimeOnPhone[call[1]] += int(call[3])
 
-maxTime = 0
-maxCallNum = ''
-#spendTimeOnPhone
+#maxTime = 0
+#maxCallNum = ''
+##spendTimeOnPhone
+##print(spendTimeOnPhone)
+#
+#for call in spendTimeOnPhone:
+#    if spendTimeOnPhone[call] > maxTime:
+#        maxTime = spendTimeOnPhone[call]
+#        maxCallNum = call
+
 #print(spendTimeOnPhone)
 
-for call in spendTimeOnPhone:
-    if spendTimeOnPhone[call] > maxTime:
-        maxTime = spendTimeOnPhone[call]
-        maxCallNum = call
+longest_duration = max(spendTimeOnPhone.items(), key=lambda x: x[1])
 
-print("{} spent the longest time, {} seconds, on the phone during September 2016.".format(maxCallNum, maxTime))
+#print("{} spent the longest time, {} seconds, on the phone during September 2016.".format(maxCallNum, maxTime))
+print("{} spent the longest time, {} seconds, on the phone during September 2016.".format(*longest_duration))
+
